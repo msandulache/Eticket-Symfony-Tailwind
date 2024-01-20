@@ -46,13 +46,10 @@ Install dependencies into vendor folder
 Run database migrations
 
 ```bash
-  symfony console make:migration
-```
-
-
-```bash
   symfony console doctrine:migrations:migrate
 ```
+
+To load the fixtures in our database
 
 ```bash
   symfony console doctrine:fixtures:load
