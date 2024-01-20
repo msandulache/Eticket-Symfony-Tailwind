@@ -55,6 +55,19 @@ To load the fixtures in our database
   symfony console doctrine:fixtures:load
 ```
 
+```bash
+   exit
+```
+
+Configure Tailwind CSS with Symfony
+
+```bash
+   npm install -D tailwindcss postcss postcss-loader autoprefixer
+```
+
+```bash
+   npm run watch
+```
 
 Now access in browser:
 
@@ -62,7 +75,6 @@ http://localhost:8080/
 
 
 ## For local database access
-
 
 ```bash
     docker-compose exec database /bin/bash
