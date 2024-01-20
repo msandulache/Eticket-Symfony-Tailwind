@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class GenreController extends AbstractController {
-    #[Route('/', name: 'index')]
+    #[Route('/genres', name: 'genre_list')]
     public function index(
         GenreRepository $genreRepository
     )
