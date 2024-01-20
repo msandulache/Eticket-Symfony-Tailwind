@@ -43,8 +43,6 @@ Install dependencies into vendor folder
   composer install
 ```
 
-Run database migrations
-
 
 Now access in browser:
 
