@@ -43,6 +43,21 @@ Install dependencies into vendor folder
   composer install
 ```
 
+Run database migrations
+
+```bash
+  symfony console make:migration
+```
+
+
+```bash
+  symfony console doctrine:migrations:migrate
+```
+
+```bash
+  symfony console doctrine:fixtures:load
+```
+
 
 Now access in browser:
 
