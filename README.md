@@ -62,6 +62,10 @@ To load the fixtures in our database
 Configure Tailwind CSS with Symfony
 
 ```bash
+    cd app
+```
+
+```bash
    npm install -D tailwindcss postcss postcss-loader autoprefixer
 ```
 
