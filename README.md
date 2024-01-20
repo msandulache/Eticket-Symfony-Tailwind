@@ -4,7 +4,7 @@
 Hello,
 
 
-This project is intended to be an e-commerce web app through which a user can browse movies imported regulary from themoviedb (https://www.themoviedb.org/) through their API and can order tickets for the desired movies with the help of Stripe (https://stripe.com/en-gb-ro).
+This project is intended to be an e-commerce web app through which a user can browse movies imported regulary from themoviedb (https://www.themoviedb.org/) through their API and can order tickets for the desired movies.
 
 It is intended to be a fun and educational PHP application.
 
@@ -74,9 +74,6 @@ http://localhost:8080/
 ## Author
 
 - [Marius Sandulache](https://github.com/msandulache)
-## Contributing
-
-
 
 
 ## Feedback
