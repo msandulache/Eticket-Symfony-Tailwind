@@ -2,18 +2,20 @@
 
 namespace App\Controller;
 
-use App\Repository\GenreRepository;
+use App\Api\TheMovieDataBase;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PageController extends AbstractController {
-    #[Route('/', name: 'index')]
-    public function getIndex(): Response {
 
-        return $this->render(
-            'index.html.twig', []
-        );
+    #[Route('/', name: 'app_index')]
+    public function index(TheMovieDataBase $theMovieDataBase): Response
+    {
+        return $this->render('index.html.twig', [
+            'nowPlayingMovies' => $theMovieDataBase->getNowPlayingMovies(8),
+            'popularMovies' => $theMovieDataBase->getPopularMovies(8)
+        ]);
     }
 
     #[Route('/account', name: 'account')]
