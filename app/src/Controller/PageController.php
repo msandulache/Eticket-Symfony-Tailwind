@@ -9,14 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PageController extends AbstractController {
 
-    #[Route('/', name: 'app_index')]
-    public function index(TheMovieDataBase $theMovieDataBase): Response
-    {
-        return $this->render('index.html.twig', [
-            'nowPlayingMovies' => $theMovieDataBase->getNowPlayingMovies(8),
-            'popularMovies' => $theMovieDataBase->getPopularMovies(8)
-        ]);
-    }
 
     #[Route('/account', name: 'account')]
     public function getAccount(): Response {
@@ -39,14 +31,6 @@ class PageController extends AbstractController {
 
         return $this->render(
             'login.html.twig', []
-        );
-    }
-
-    #[Route('/product', name: 'product')]
-    public function getProduct(): Response {
-
-        return $this->render(
-            'product.html.twig', []
         );
     }
 

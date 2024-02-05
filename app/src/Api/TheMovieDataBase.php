@@ -17,6 +17,7 @@ class TheMovieDataBase
     protected string $images_backdrop_size = '';
     protected string $images_logo_size = '';
     protected string $images_poster_size = '';
+    protected string $images_original_size = 'original';
     protected array $genres;
 
     public function __construct() {
@@ -61,6 +62,7 @@ class TheMovieDataBase
     {
         $movie = $this->get('/movie/' . $id);
 
+        $movie['original_image_path'] = $this->images_base_url . $this->images_original_size . $movie['poster_path'];
         $movie['poster_path'] = $this->images_base_url . $this->images_poster_size . $movie['poster_path'];
         $movie['backdrop_path'] = $this->images_base_url . $this->images_backdrop_size . $movie['backdrop_path'];
         $movie['genres'] = $this->getGenres($movie['genres'], 5);
